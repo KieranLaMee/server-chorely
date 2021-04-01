@@ -23,6 +23,11 @@ var db = pgp(dbConfig);
 // app.set('view engine', 'ejs');
 // app.use(express.static(__dirname + '/'));//This line is necessary for us to use relative paths and access our resources directory
 
+
+app.get("/test",function(res,req){
+    res.json({"test":"hello"});
+});
+ 
 app.get('/', function(req, res) {
     var query1 = 'SELECT * FROM users;';
     db.any(query1)
