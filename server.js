@@ -13,7 +13,10 @@ const dbConfig = {
 	port: 5432,
 	database: 'd8b2aul18qrmq',
 	user: 'exjyekrkvtcaoi',
-	password: '4793810bb7fdf7594e358eacc6c2583eceebc167b80de53c6369e92d155868f8'
+	password: '4793810bb7fdf7594e358eacc6c2583eceebc167b80de53c6369e92d155868f8',
+    ssl:{
+        rejectUnauthorized : false
+    }
 };
 
 var db = pgp(dbConfig);
